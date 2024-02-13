@@ -1,9 +1,9 @@
 body{
-    font: 15px/1.5 Arial, Helvetica,sans-serif;
-    padding:0;
-    margin:5px;
-    background-color:#f4f4f4;
-  }
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:5px;
+  background-color:#f4f4f4;
+}
   
   /* Global */
   .container{
@@ -36,7 +36,7 @@ body{
   
   /* Header **/
   header{
-    background:#25a3f1;
+    background:#2f3947;
     color:#ffffff;
     padding-top:30px;
     min-height:70px;
