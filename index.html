@@ -1,128 +1,412 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Maseno All learning Materials Center">
-	  <meta name="keywords" content="Research Platform,Q&A Zone, Ideology CrossPlatform">
-  	<meta name="author" content="Erick Mwakazi">
-    <title>Mood Magic</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" style="border-radius: 50%;" href="./assets/about-pic.png" type="image/x-icon">
+    <style>
+      .under-development {
+        animation: marquee 15s linear infinite, glow 4s ease-in-out infinite alternate;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      }
+    
+      @keyframes marquee {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        to {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">Mood</span> Magic</h1>
+    <nav id="desktop-nav">
+      <div class="logo">Eric Mwakazi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+       
+      </div>
+    </nav>
+    <div class="under-development">This website is Still under Development
+      <p>Some functions arent fully implemented hence may break</p>
+    </div>
+    <nav id="hamburger-nav">
+      <div class="logo">Eric Mwakazi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <nav>
-          <ul>
-            <a href="index.html"i class="fas fa-home"></i>Home</a>&nbsp; &nbsp;
-            <a href="http://recom.portfolio.mwakazieric.tech" target="_self"><i class="fas fa-heart"></i>For You</a>&nbsp; &nbsp;
-            <a href="http://portfolio.mwakazieric.tech"><i class="fas fa-user-circle"></i>Profile</a>
-          </ul>
-        </nav>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
-    </header>
-    <section id="showcase">  
-      <br>
-      <a id="welcomeLink" class="btn btn-primary" href="#" role="button" onclick="showWelcomeContent()">Welcome</a>
-      <a id="moreLink" class="btn btn-outline-primary" href="#" role="button" onclick="showMoreContent()">More</a>
-      <br><br>
-      <div id="contain" class="container"> 
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" style="border-radius: 10%;" alt="eric profile picture" />
       </div>
-      <div id="Welcome">
-        <h1>Welcome To Mood Magic</h1>
-        <p>Elevate your day with the best songs recommended to you by our system</p>
-      </div>
-      <div class="container text-center" id="moreContent" style="display: none;">
-        <div class="row align-items-end">
-          <div class="col">
-            <h2>Recommender Page</h2>
-            <p>Here user selects a song and from the offered songs in drop down menu and clicks recommendation</p>
-            <img src="static/rcom1.png" alt="recommendation">
-          </div>
-          <div class="col">
-            <h2>Recommended Songs</h2>
-            <p>Songs recommended to user by system are shown here</p>
-            <img src="static/rcom.png" alt="recommended">
-          </div>
-          <div class="col">
-            <h2>Search song Feature</h2>
-            <p>User searches for songs Recommended</p>
-            <img src="static/search.png" alt="search">
-          </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Eric Mwakazi</h1>
+        <p class="section__text__p2">Backend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/mycv.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/eric-mwakazi'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Neivanny1'"
+          />
         </div>
       </div>
     </section>
-    <section style="margin-top: 80px;" id="newsletter">
-      <div class="container">
-        <h1>Subscribe To Our Website</h1>
-        <form>
-          <input type="email" placeholder="Enter Email..." required>
-          <button type="submit" class="button_1">Subscribe</button>
-        </form>
-      </div>
-    </section>
-    <section style="color:#72aff5;" id="main">
-      <div class="container">
-        <article id="main-col">
-          <h1 class="page-title">Motivation</h1>
-          <p>
-            As a music enthusiast with an eclectic taste, I felt frustrated 
-            by the limitations of existing streaming platforms.
-          </p>
-          <p class="blue">
-            Their recommendations were predictable, often suggesting mainstream hits or 
-            artists similar to ones they already knew. 
-            I craved musical adventures, a chance to discover hidden gems from across genres and 
-            time periods.
-            Fueled by this desire, I ventured into the world of data science and music analysis.
-            After months of experimentation, I created a recommendation 
-            system that went beyond simple popularity metrics.
-            The result? A personalized playlist experience that felt 
-            like having a musical soulmate curate their listening journey. 
-          </p>
-        </article>
-        <aside id="sidebar">
-          <div class="dark">
-            <h3>About Us</h3>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            width="400vh"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1+ years <br />Backend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree Information Technology<br/> Software Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
             <p>
-              Mood magic is User Friendly Website design to bring and cheer up people moods by recommnding songs to them.</p>
-               <p class="blue">
-       For team work and Quick talent sport we developed a machine learning model that 
-       recommneds songs to user based on the dataset it has been trained on.
-     The algrothim recommneds songs to user which upon clicking it searches for  song from youtube and tries to play it.
-     </p></div>
-        </aside>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask and Django</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>FAST AND REST APIs</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NGINX</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Unit Testing</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL and MySql</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Airbnb clone</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Neivanny1/AirBnB_clone_v4/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Music Recommendation System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Neivanny1/Music_recommendation_system/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./RECOMMENDATION SYS LANDING PAGE/index.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">mwakazieric@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
     </section>
     <footer>
-      <p>Mood Magic, Copyright &copy; 2024</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Eric Mwakazi. All Rights Reserved.</p>
     </footer>
-    <script>
-      function showWelcomeContent() {
-        document.getElementById('contain').style.display = 'none';
-        document.getElementById('Welcome').style.display = 'block';
-        document.getElementById('moreContent').style.display = 'none';
-        document.getElementById('welcomeLink').classList.add('btn-primary');
-        document.getElementById('moreLink').classList.remove('btn-primary');
-        document.getElementById('welcomeLink').classList.remove('btn-outline-primary');
-        document.getElementById('moreLink').classList.add('btn-outline-primary');
-      }
-    
-      function showMoreContent() {
-        document.getElementById('contain').style.display = 'none';
-        document.getElementById('Welcome').style.display = 'none';
-        document.getElementById('moreContent').style.display = 'block';
-        document.getElementById('moreLink').classList.add('btn-primary');
-        document.getElementById('welcomeLink').classList.remove('btn-primary');
-        document.getElementById('moreLink').classList.remove('btn-outline-primary');
-        document.getElementById('welcomeLink').classList.add('btn-outline-primary');
-      }
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
