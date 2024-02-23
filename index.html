@@ -8,30 +8,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="icon" style="border-radius: 50%;" href="./assets/about-pic.png" type="image/x-icon">
-    <style>
-      .under-development {
-        animation: marquee 15s linear infinite, glow 4s ease-in-out infinite alternate;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-      }
-    
-      @keyframes marquee {
-        from {
-          transform: translateX(100%);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-    
-      @keyframes glow {
-        from {
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-        }
-        to {
-          text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-        }
-      }
-    </style>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -43,12 +19,10 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-       
-      </div>
+        
     </nav>
-    <div class="under-development">This website is Still under Development
-      <p>Some functions arent fully implemented hence may break</p>
-    </div>
+    <marquee behavior="scroll" direction="right" class="under-development">This portfolio is still Under Development</marquee>
+      </div>
     <nav id="hamburger-nav">
       <div class="logo">Eric Mwakazi</div>
       <div class="hamburger-menu">
@@ -347,7 +321,7 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Simple Shell C</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
