@@ -1,2 +1,2 @@
 # MY PORTFOLIO
-Website: mwakazieric.vercel.app
+Website: https://mwakazieric.vercel.app
